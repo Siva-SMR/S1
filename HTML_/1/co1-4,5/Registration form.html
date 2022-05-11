@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="reg.css">
+    <style>
+        .input{
+            border-radius: 5px;
+            border: 0px solid blue;
+            padding: 10px;
+            float: left;
+            width: 100%;
+        }
+        .button{
+            padding: 10px;
+            width: 75%;
+            border-radius: 20px;
+            border: 1px solid red;
+            color: white;
+        }
+        d{
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+        .button,input :hover
+        {
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h2><p>REGISTRATION FORM</p></h2>
+        <form action="">
+            <div>
+                <table>
+                <tr>
+                    <td><input type="text" placeholder="First name" class="input"/></td>
+                    <td><input type="text" placeholder="Last name" class="input"/></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Mobile number</p>
+                    </td>
+                    <td><input type="text" placeholder="Number" class="input"/></td>
+                </tr>
+                <tr>
+                    <td><p>Date of Birth</p></td>
+                    <td><input type="date" class="input"></td>
+                </tr>
+                <tr>
+                    <td><p>Gender</p></td>
+                    <td><input type="radio" value="male" id="male" checked="true">
+                    <label for="male">Male</label><br>
+                    <input type="radio" value="female" id="female">
+                    <label for="female">Female</label><br><br></td>
+                </tr>
+                <tr>
+                    <td><p>Languages known</p></td>
+                    <td><input type="checkbox" value="c" id="c" checked="true">
+                        <label for="c">C</label><br>
+                        <input type="checkbox" value="p" id="p">
+                        <label for="p">Python</label><br><br></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><textarea name="" id="" cols="80" rows="3" placeholder="Address" class="input"></textarea></td>
+                </tr>
+                <tr>
+                    <td><p>Select Country</p></td>
+                    <td><select name="" id="" class="input">
+                        <option value=" "></option>
+                        <option value="India">INDIA</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><p>Select State</p></td>
+                    <td><select name="" id="" class="input">
+                        <option value=" "></option>
+                        <option value="Kerala">KERALA</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><p>Upload Photo</p></td>
+                    <td><input type="file" placeholder="number" class="input"></td>
+                </tr>
+                <tr>
+                    <td><input type="reset" value="reset" class="button"></td>
+                    <td><input type="submit" value="submit" class="button" style="float: right;"/></td>
+                </tr>
+            </table>
+        </div>
+        </form>
+    </center>
+</body>
+</html>

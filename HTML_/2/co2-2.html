@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <style>
+            td,
+            th {
+              border: 1px solid black;
+              padding: 3px;
+              text-align: center;
+            }
+          </style>
+          <script>
+            
+            function createCalendar(elem, year, month) {
+                var m=["January","February","March","April","May","June","July","August","September","October","November","December"];
+                var mon = month;
+                var d = new Date(year, mon);
+          
+                var table = '<table>';
+                table+="<tr><th colspan='7'>"+m[mon]+"</th></tr>";
+                table+='<tr><th>SU</th><th>MO</th><th>TU</th><th>WE</th><th>TH</th><th>FR</th><th>SA</th></tr><tr>';
+              
+                for (let i = 0; i < d.getDay(); i++) {
+                  table += '<td></td>';
+                }
+          
+            
+                while (d.getMonth() == mon) {
+                  table += '<td>' + d.getDate() + '</td>';
+          
+                  if (getDay(d) % 7 == 6) { 
+                    table += '</tr><tr>';
+                  }
+          
+                  d.setDate(d.getDate() + 1);
+                }
+                if (getDay(d) != 0) {
+                  for (let i = getDay(d); i < 7; i++) {
+                    table += '<td></td>';
+                  }
+                }
+          
+          
+                table += '</tr></table>';
+                document.getElementById(elem).innerHTML = table;
+              }
+              function getDay(date) { 
+                let day = date.getDay();
+                if (day == 0) day = 7; 
+                return day;
+              }
+            function cal()
+            {
+                yyyy=document.getElementById("yyyy").value;
+                
+                for(let mm=0;mm<12;mm++)
+                { 
+                  
+                    var mont="mont".concat(mm);
+                    createCalendar(mont, yyyy,mm);
+                }
+                
+                
+            }
+         </script>
+    </head>
+    <body>
+        <center>
+            <table>
+                <tr>
+                    <th>Enter the year</th>
+                    <th><input type="text" id="yyyy"></th>
+                </tr>
+               <tr>
+                   <th><button onclick="cal()">View</button></th>
+               </tr>
+            </table>
+            <table id="caltable">
+              <tr>
+                <td><div id="mont0"></div></td>
+                <td><div id="mont1"></div></td>
+                <td><div id="mont2"></div></td>
+                <td><div id="mont3"></div></td>
+              </tr>
+              <tr>
+                <td><div id="mont4"></div></td>
+                <td><div id="mont5"></div></td>
+                <td><div id="mont6"></div></td>
+                <td><div id="mont7"></div></td>
+              </tr>
+              <tr>
+                <td><div id="mont8"></div></td>
+                <td><div id="mont9"></div></td>
+                <td><div id="mont10"></div></td>
+                <td><div id="mont11"></div></td>
+              </tr>
+            </table>
+         </center>
+         
+    </body>
+</html>

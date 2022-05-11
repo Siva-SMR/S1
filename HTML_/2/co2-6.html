@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Exam</title>
+    <style>
+        td{
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Online Examination</h1>
+    <table style="border: 2px solid black; padding: 25px;">
+        <tr>
+            <th>1.Abbreviation for OS</th>
+        </tr>
+        <tr>
+            <td><input type="radio" id="" name="os">
+            <label for="">Open software</label></td>
+            <td><input type="radio" id="q1" name="os">
+            <label for="">Operating system</label></td>
+        
+        </tr>
+        <tr>
+            <th>2.Abbreviation for CPU</th>
+        </tr>
+        <tr>
+            <td><input type="radio" id="q2" name="cpu">
+            <label for="">Central processing unit</label></td>
+            <td><input type="radio" id="" name="cpu">
+            <label for="">Central publishing unit</label></td>
+        
+        </tr>
+        <tr>
+            <th>3.Abbreviation for OSS</th>
+        </tr>
+        <tr>
+            <td><input type="radio" id="q3" name="oss">
+            <label for="">Open source software</label></td>
+            <td><input type="radio" id="" name="oss">
+            <label for="">Open system software</label></td>
+        
+        </tr>
+        <tr>
+            <th>4.Abbreviation for RAM</th>
+        </tr>
+        <tr>
+            <td><input type="radio" id="q4" name="ram">
+            <label for="">Random access memory</label></td>
+            <td><input type="radio" id="" name="ram">
+            <label for="">Read access memory</label></td>
+        
+        </tr>
+        <tr>
+            <th>5.Abbreviation for ROM</th>
+        </tr>
+        <tr>
+            <td><input type="radio" id="" name="rom">
+            <label for="">Read order memory</label></td>
+            <td><input type="radio" id="q5" name="rom">
+            <label for="">Read only memory</label></td>
+        
+        </tr>
+        <tr>
+            <th colspan="2"><button onclick="sub()">Submit</button></th>
+        </tr>
+    </table>
+</center>
+<script>
+    function sub()
+    {
+        score=0;
+        if(document.getElementById('q1').checked)
+        {
+            score++;
+        }
+        if(document.getElementById("q2").checked)
+        {
+            score++;
+        }
+        if(document.getElementById("q3").checked)
+        {
+            score++;
+        }
+        if(document.getElementById("q4").checked)
+        {
+            score++;
+        }
+        if(document.getElementById("q5").checked)
+        {
+            score++;
+        }
+        document.write(score)
+    }
+</script>
+</body>
+</html>

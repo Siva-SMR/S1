@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+</head>
+<body>
+   
+    <center>
+        <form name="Registrationform" >
+        <h2>REGISTRATION FORM</h2>
+        <div>
+            <table style="border: 2px solid black; padding: 25px">
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="NAME" name="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Gender</p>
+                    </td>
+                    <td>
+                        <input type="radio" value="male" name="gender">Male
+                        <input type="radio" name="gender" value="female">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Contact</p>
+                    </td>
+                    <td>
+                        <input type="" placeholder="NUMBER" name="number">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Date of Birth</p>
+                    </td>
+                    <td>
+                        <input type="date" name="dob" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>E-mail</p>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="E-MAIL" name="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Password</p>
+                    </td>
+                    <td>
+                        <input type="password" placeholder="PASSWORD" name="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button>RESET</button>
+                    </td>
+                    <td>
+                        <button onclick="validateform()">SUBMIT</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    </center>
+    <script>
+        function validateform()
+        {
+            var c = /^[A-Za-z]+$/;
+            var n = /(6|7|8|9)\d{9}/;
+            let name = document.forms["Registrationform"]["name"].value;
+                if (name == "") 
+                {
+                    alert("Name must be filled out");
+                    return false;
+                }
+                else if(!c.test(name))
+                {
+                    alert("Name should not contain numbers or special characters");
+                    return false;
+                }
+            let gender = document.forms["Registrationform"]["gender"].value;
+                if (gender == "") 
+                {
+                    alert("Gender must be selected");
+                    return false;
+                }
+            let number = document.forms["Registrationform"]["number"].value;
+                if (number == "") 
+                {
+                    alert("Number must be filled out");
+                    return false;
+                }
+                else if(!n.test(number))
+                {
+                    alert("Invalid Input");
+                    return false;
+                }
+            let dob = document.forms["Registrationform"]["dob"].value;
+                if (dob == "") 
+                {
+                    alert("DOB must be filled out");
+                    return false;
+                }
+            let email = document.forms["Registrationform"]["email"].value;
+                if (email == "") 
+                {
+                    alert("E-mail must be filled out");
+                    return false;
+                }
+            let password = document.forms["Registrationform"]["password"].value;
+                if (password == "") 
+                {
+                    alert("Password must be filled out");
+                    return false;
+                }
+        }
+    </script>
+</body>
+</html>

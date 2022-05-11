@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String methods</title>
+</head>
+<body>
+    <center><h1>String Methods</h1></center>
+    <table align="center" cellpadding="2" cellspacing="2" border="">
+        <tr>
+            <th colspan="2">Enter a String</th>
+            <th><input type="text" name="string" id="a"></th>
+        </tr>
+         <tr>
+            <th colspan="2">Length</th>
+            <th colspan="2"><input type="number" name="result" id="b"></th>
+        </tr>
+        <tr>
+            <th><button onclick="len()">Length</button></th>
+        </tr>
+        <tr>
+            <th colspan="2">Enter start</th>
+            <th colspan="2"><input type="number" name="start" id="c"></th>
+        </tr>
+        <tr>
+            <th colspan="2">Enter end</th>
+            <th colspan="2"><input type="number" name="end" id="d"></th>
+        </tr>
+        <tr>
+            <th colspan="2">Sliced string</th>
+            <th colspan="2"><input type="text" name="sliced" id="e"></th>
+        </tr>
+        <tr>
+            <th><button onclick="slice()">Slice</button></th>
+        </tr>
+        <tr>
+            <th colspan="2">Enter a string</th>
+            <th colspan="2"> <input type="text" name="string" id="f"></th>
+        </tr>
+        <tr>
+            <th colspan="2">Replaced string</th>
+            <th colspan="2"><input type="text" name="replaced string" id="g"></th>
+        </tr>
+        <tr>
+            <th><button onclick="Replace()">Replace</button></th>       
+        </tr>
+        <tr>
+            <th colspan="2">Substring</th>
+            <th colspan="2"><input type="text" name="substrout" id="strout"></th>
+        </tr>
+        <tr>
+            <th><button onclick="substring()">Substring</button></th>
+        </tr>
+        <tr>
+            <th colspan="2">Uppercase</th>
+            <th><input type="text" name="up" id="upper"></th>
+        </tr>
+        <tr>
+            <th colspan="2">Lowercase</th>
+            <th><input type="text" name="low" id="lower"></th>
+        </tr>
+        <tr>
+            <th><button onclick="conv()">Convert</button></th>
+        </tr>
+        <tr>
+            <th colspan="2">Text 1</th>
+            <th colspan="2"> <input type="text" name="str1" id="tex"></th>
+        </tr>
+        <tr>
+            <th colspan="2">Text 2</th>
+            <th colspan="2"> <input type="text" name="str2" id="txt"></th>
+        </tr>
+        <tr>
+            <th colspan="2">Concat string</th>
+            <th colspan="2"> <input type="text" name="str3" id="txtout"></th>
+        </tr>
+        <tr>
+            <th><button onclick="concat()">Concat</button></th>
+        </tr>
+    </table>
+    <hr>
+    <center><h1>Math</h1></center>
+    <table align="center" cellpadding="2" cellspacing="2" border="">
+        <tr>
+            <th colspan="2">Enter a number</th>
+            <th colspan="2"><input type="number" name="num" id="numb"></th>
+        </tr>
+        <tr>
+            <th><button onclick="roundoff()">Round</button></th>
+            <th colspan="2"><input type="number" name="" id="round"></th>
+        </tr>
+        <tr>
+            <th><button onclick="ceil()">Ceil</button></th>
+            <th colspan="2"><input type="number" name="" id="ceil"></th>
+        </tr>
+        <tr>
+            <th><button onclick="floor()">Floor</button></th>
+            <th colspan="2"><input type="number" name="" id="floor"></th>
+        </tr>
+        <tr>
+            <th><button onclick="trunc()">Trunc</button></th>
+            <th colspan="2"><input type="number" name="" id="trunc"></th>
+        </tr>
+        <tr>
+            <th><button onclick="sign()">Sign</button></th>
+            <th colspan="2"><input type="number" name="" id="sign"></th>
+        </tr>
+        <tr>
+            <th><button onclick="sqr()">Pow</button></th>
+            <th colspan="2"><input type="number" name="" id="sqr"></th>
+        </tr>
+    <script>
+       function len()
+        {
+            var a=document.getElementById("a").value;
+            var b=a.length;
+            document.getElementById("b").value=b;
+        }
+        function slice()
+        {
+            var a =document.getElementById("a").value;
+            var b =document.getElementById("c").value;
+            var c =document.getElementById("d").value;
+            var d =a.slice(b,c);
+            document.getElementById("e").value=d;
+        }
+        function Replace()
+        {
+            var a=document.getElementById("a").value;
+            var f=document.getElementById("f").value;
+            var b=a.replace(a,f);
+            document.getElementById("g").value=b;
+        }
+        function substring()
+        {
+            var a=document.getElementById("a").value;
+            var b=a.substring(2,5);
+            document.getElementById("strout").value=b;
+        }
+        function conv()
+        {
+            var a=document.getElementById("a").value;
+            var b=a.toUpperCase();
+            document.getElementById("upper").value=b;
+            var a=document.getElementById("a").value;
+            var c=a.toLowerCase();
+            document.getElementById("lower").value=c;
+        }
+        function concat()
+        {
+            var a=document.getElementById("tex").value;
+            var b=document.getElementById("txt").value;
+            var c=a.concat(" ",b);
+            document.getElementById("txtout").value=c;
+        }
+        function roundoff()
+        {
+            var a=document.getElementById("numb").value;
+            var b=Math.round(a);
+            document.getElementById("round").value=b;
+        }
+        function ceil()
+        {
+            var a=document.getElementById("numb").value;
+            var b=Math.ceil(a);
+            document.getElementById("ceil").value=b;
+        }
+        function floor()
+        {
+            var a=document.getElementById("numb").value;
+            var b=Math.floor(a);
+            document.getElementById("floor").value=b;
+        }
+        function trunc()
+        {
+            var a=document.getElementById("numb").value;
+            var b=Math.trunc(a);
+            document.getElementById("trunc").value=b;
+        }
+        function sign()
+        {
+            var a=document.getElementById("numb").value;
+            var b=Math.sign(a);
+            document.getElementById("sign").value=b;
+        }
+        function sqr()
+        {
+            var a=document.getElementById("numb").value;
+            var b=Math.pow(a,2);
+            document.getElementById("sqr").value=b;
+        }
+    </script>
+</body>
+</html>

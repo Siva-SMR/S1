@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event handling</title>
+</head>
+<body id="a" style="background-color: gainsboro;">
+    <center><button onclick="change()" style="align-items: center; margin-top: 300px;">Click to change the Color</button></center>
+    <script>
+        function change()
+        {
+            const randomColor = Math.floor(Math.random()*12345678).toString(16);
+                document.body.style.backgroundColor = "#" + randomColor;
+                color.innerHTML = "#" + randomColor;
+        }
+    </script>
+</body>
+</html>
